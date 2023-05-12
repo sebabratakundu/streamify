@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 const buttonClasses = {
   'o-primary': 'border border-2 border-indigo-600 p-2 text-indigo-600 rounded hover:bg-indigo-50',
   'o-secondary': 'border border-2 border-teal-500 p-2 text-teal-500 rounded hover:bg-teal-50',
@@ -13,6 +15,6 @@ const buttonClasses = {
   'info': 'bg-cyan-500 p-2 text-white rounded hover:bg-cyan-600',
 }
 
-export default function Button({children, className, theme='primary'}) {
-  return <button className={`${buttonClasses[theme]} ${className}`}>{children}</button>
+export default function Button({children, className, theme='primary', ...rest}) {
+  return <button className={clsx(buttonClasses[theme], className)} {...rest}>{children}</button>
 }
