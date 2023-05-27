@@ -15,6 +15,6 @@ const buttonClasses = {
   'info': 'bg-cyan-500 p-2 text-white rounded hover:bg-cyan-600',
 }
 
-export default function Button({children, className, theme='primary', ...rest}) {
-  return <button className={clsx(buttonClasses[theme], className)} {...rest}>{children}</button>
+export default function Button({children, className, theme='primary', disabled=false, ...rest}) {
+  return <button className={clsx(buttonClasses[theme], className, disabled && 'bg-gray-400 hover:bg-gray-500')} disabled={disabled} {...rest}>{children}</button>
 }

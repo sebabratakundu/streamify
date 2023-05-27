@@ -1,5 +1,4 @@
 import {animated, useSpring} from "@react-spring/web";
-import {useEffect, useRef} from "react";
 
 export default function Flip({children, show, onClose, ...rest}) {
   const [springs, api] = useSpring(() => ({transform: show ? 'scaleX(1)' : 'scaleX(0)'}));
