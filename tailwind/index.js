@@ -2,6 +2,7 @@ import Button from "@/tailwind/Button";
 import Card from "@/tailwind/Card";
 import Navbar from "@/tailwind/Navbar";
 import {Fade, Expand, Zoom, Flip} from "@/tailwind/effects";
+import {Form, Input, Radio, Checkbox, Select, Textarea} from "@/tailwind/Form";
 
 export {
   Button,
@@ -10,5 +11,11 @@ export {
   Fade,
   Expand,
   Zoom,
-  Flip
+  Flip,
+  Form,
+  Input,
+  Radio,
+  Checkbox,
+  Select,
+  Textarea
 }
