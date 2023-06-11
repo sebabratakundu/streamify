@@ -1,8 +1,10 @@
-import Button from "@/tailwind/Button";
+import {Button, IconButton} from "@/tailwind/Button";
 import Card from "@/tailwind/Card";
 import Navbar from "@/tailwind/Navbar";
 import {Fade, Expand, Zoom, Flip} from "@/tailwind/effects";
 import {Form, Input, Radio, Checkbox, Select, Textarea} from "@/tailwind/Form";
+import {Carousel, CarouselItem} from "@/tailwind/Carousel";
+import Icon from "@/tailwind/Icon";
 
 export {
   Button,
@@ -17,5 +19,9 @@ export {
   Radio,
   Checkbox,
   Select,
-  Textarea
+  Textarea,
+  Carousel,
+  CarouselItem,
+  Icon,
+  IconButton
 }

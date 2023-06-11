@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import {Icon} from "@/tailwind";
 
 const buttonClasses = {
   'o-primary': 'border border-2 border-indigo-600 p-2 text-indigo-600 rounded hover:bg-indigo-50',
@@ -13,8 +14,21 @@ const buttonClasses = {
   'success': 'bg-green-500 p-2 text-white rounded hover:bg-green-600',
   'error': 'bg-red-500 p-2 text-white rounded hover:bg-red-600',
   'info': 'bg-cyan-500 p-2 text-white rounded hover:bg-cyan-600',
+  'dark': 'bg-slate-800 p-2 text-white rounded hover:bg-slate-700',
 }
 
-export default function Button({children, className, theme='primary', disabled=false, ...rest}) {
+export function IconButton({children, className, theme='primary', disabled=false, ...rest}) {
+  return (
+    <button
+      className={clsx(buttonClasses[theme], 'w-10 h-10 rounded-full', className, disabled && 'bg-gray-400 hover:bg-gray-500')}
+      {...rest}
+      disabled={disabled}
+    >
+      <Icon>{children}</Icon>
+    </button>
+  )
+}
+
+export function Button({children, className, theme='primary', disabled=false, ...rest}) {
   return <button className={clsx(buttonClasses[theme], className, disabled && 'bg-gray-400 hover:bg-gray-500')} disabled={disabled} {...rest}>{children}</button>
 }
